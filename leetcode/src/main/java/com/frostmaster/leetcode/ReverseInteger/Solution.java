@@ -18,14 +18,4 @@ public class Solution {
     return result;
   }
 
-  public int isBiggerTHanInt(int x, int tail, int result) {
-    if(x > 0 && (Integer.MAX_VALUE - tail) / 10 < result)
-      return 0;
-    if(x < 0 && (Integer.MIN_VALUE - tail) / 10 > result)
-      return 0;
-    return x;
-  }
-
-
-
 }
