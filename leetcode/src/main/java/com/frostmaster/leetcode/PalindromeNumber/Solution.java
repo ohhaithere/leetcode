@@ -2,24 +2,34 @@ package com.frostmaster.leetcode.PalindromeNumber;
 
 public class Solution {
 
-  public boolean isPalindrome(int x) {
-    if(x < 0) {
-      return false;
-    }
-    if(x < 10) {
-      return true;
-    }
+  public static void main(String[] args) {
+    System.out.println(fib(6));
+  }
 
-    int palidrome = 0;
-    int shredIt = x;
 
-    while (shredIt != 0) {
-      int tail = shredIt % 10;
-      shredIt /= 10;
-      palidrome = palidrome * 10 + tail;
+  /* Вывести N-ый элемент последовательности Фибоначчи (каждый N-ый элемент последовательности равен сумме N-1 и N-2 элементов: 1, 1, 2, 3, 5, 8)
+  Функция должна принимать индекс и выводить соответствующее число.
+  */
+
+  public static int fib(int x) {
+    if (x < 1) {
+      throw new IllegalArgumentException();
     }
 
-    return palidrome == x;
+    if (x < 3) {
+      return 1;
+    }
+
+    int prev = 1;
+    int current = 1;
+    int next = 1;
+    for (int i = 2; i < x; i++) {
+      next = prev + current;
+      prev = current;
+      current = next;
+    }
+
+    return current;
   }
 
 }
