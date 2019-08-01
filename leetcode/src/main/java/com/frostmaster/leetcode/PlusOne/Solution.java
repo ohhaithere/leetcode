@@ -33,10 +33,5 @@ public class Solution {
     }
   }
 
-  public static void main(String args[]) {
-    int[] arr = new int[] {8,9,9,9};
-    plusOne(arr);
-  }
-
 }
 
