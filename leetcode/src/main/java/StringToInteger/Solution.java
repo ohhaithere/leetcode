@@ -42,6 +42,5 @@ public class Solution {
         // Return it after multiplying it with its sign.
         return sign * result;
     }
-}
 
 }
