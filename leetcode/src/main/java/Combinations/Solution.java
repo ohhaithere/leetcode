@@ -17,7 +17,7 @@ public class Solution {
 
     private void backtrack(int n, int target, int start, LinkedList<Integer> track, List<List<Integer>> result) {
 
-        if (track.size() == target) { 
+        if (track.size() == target) {
             result.add(new LinkedList<>(track));
             return;
         }
