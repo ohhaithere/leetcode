@@ -12,7 +12,7 @@ class MyQueue {
                 s1.push(s2.pop());
             }
         }
-        s1.push(x);a
+        s1.push(x);
     }
 
     public int pop() {
