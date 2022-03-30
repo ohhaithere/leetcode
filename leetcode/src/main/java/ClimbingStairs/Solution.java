@@ -7,16 +7,17 @@ public class Solution {
       return 1;
     }
 
-    int first = 1;
-    int second = 2;
+    int first = 0;
+    int second = 1;
+    int temp = second;
 
-    for(int i = 3; i < n; i++) {
-      int temp = first + second;
+    for(int i = 2; i <= n; i++) {
+      temp = first + second;
       first = second;
       second = temp;
     }
 
-    return second;
+    return temp + first;
   }
 
 }
