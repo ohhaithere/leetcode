@@ -17,19 +17,30 @@ public class Solution {
 
     public TreeNode searchBST(TreeNode root, int val) {
 
+        if(root == null) {
+            return new TreeNode(val);
+        }
+
         TreeNode head = root;
-        while(head != null) {
-            if (head.val == val) {
-                return  head;
-            }
-            if (head.val < val) {
-                head = head.right;
+        while(true) {
+            if(head.val <= val) {
+                if(head.right != null) {
+                    head = head.right;
+                } else {
+                    head.right = new TreeNode(val);
+                    break;
+                }
             } else {
-                head = head.left;
+                if(head.left != null) {
+                    head = head.left;
+                } else {
+                    head.left = new TreeNode(val);
+                    break;
+                }
             }
         }
 
-        return null;
+        return root;
     }
 
 }
